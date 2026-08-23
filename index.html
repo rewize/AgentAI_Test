@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calc / FastAPI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="intro">
+      <p class="eyebrow">FastAPI calculator</p>
+      <h1>Make the math<br><span>feel lighter.</span></h1>
+      <p class="lede">A focused workspace for quick calculations, powered by a small JSON API.</p>
+      <div class="api-note"><span class="status-dot"></span><code>POST /api/calc</code><span>ready</span></div>
+    </section>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="display-wrap">
+        <label for="expression">Expression</label>
+        <input id="expression" type="text" inputmode="decimal" autocomplete="off" placeholder="Try 12 * (3 + 4)" autofocus>
+        <p id="error" class="error" role="alert"></p>
+      </div>
+      <div class="keypad" aria-label="Calculator keys">
+        <button class="key muted" data-action="clear">AC</button>
+        <button class="key muted" data-value="(">(</button>
+        <button class="key muted" data-value=")">)</button>
+        <button class="key operator" data-value="/">/</button>
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-value="*">*</button>
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-value="-">-</button>
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key operator" data-value="+">+</button>
+        <button class="key wide" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key equals" data-action="calculate">=</button>
+      </div>
+      <p class="hint">Enter to calculate <span>•</span> Esc to clear</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
